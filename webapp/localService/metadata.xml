@@ -1,0 +1,52 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="07573cf56d44dcb31b05629b" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="07573cf56d44dcb31b05629b_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ClientesSet" EntityType="07573cf56d44dcb31b05629b.Clientes" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="RolesSet" EntityType="07573cf56d44dcb31b05629b.Roles" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="EmpresasSet" EntityType="07573cf56d44dcb31b05629b.Empresas" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="CitasSet" EntityType="07573cf56d44dcb31b05629b.Citas" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Clientes">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Empresa" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Empresa"/>
+                <Property Name="Rol" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Rol"/>
+                <Property Name="Direccion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Direccion"/>
+                <Property Name="Telefono" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Telefono"/>
+                <Property Name="Email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email"/>
+                <Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+                <Property Name="Asesor" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Asesor"/>
+                <Property Name="Ciudad" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Ciudad"/>
+                <Property Name="Comentarios" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Comentarios"/>
+            </EntityType>
+            <EntityType Name="Roles">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Rol" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Rol"/>
+            </EntityType>
+            <EntityType Name="Empresas">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+            </EntityType>
+            <EntityType Name="Citas">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Cliente" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="Fecha" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Fecha"/>
+                <Property Name="Tipo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="Asesor" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Asesor"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

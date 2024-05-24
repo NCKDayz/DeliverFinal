@@ -1,0 +1,40 @@
+{
+    "dataBinding": {
+        "/webapp/view/ListaCitas.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/EditarProspecto.view.xml": {
+            "entitySet": "/ClientesSet"
+        }, 
+        "/webapp/view/AgendarCita.view.xml": {
+            "entitySet": "/ClientesSet"
+        }, 
+        "/webapp/view/ListaProspectos.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetalleCita.view.xml": {
+            "entitySet": "/ClientesSet"
+        }, 
+        "/webapp/view/CrearProspecto.view.xml": {
+            "entitySet": "/ClientesSet"
+        }, 
+        "/webapp/view/DetalleProspecto.view.xml": {
+            "entitySet": "/ClientesSet"
+        }, 
+        "/webapp/view/Dialog1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Popover2.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/popover_4.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/popover_3.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/popover_1.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

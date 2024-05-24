@@ -1,0 +1,160 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.manageProducts.controller.DetalleProspecto" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showEditHeaderButton="false" showFooter="false" class="sapUiSizeCompact">
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectTitle="{Nombre}" objectSubtitle="Description" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true" objectImageURI="sap-icon://customer-and-supplier">
+                <uxap:navigationBar>
+                    <Bar>
+                        <contentLeft>
+                            <Button type="Back" press="_onFioriObjectPageHeaderPress"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text="Prospecto"/>
+                        </contentMiddle>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+                <uxap:actions>
+                    <Button text="Edit" iconFirst="false" type="Emphasized" enabled="true" press="_onFioriObjectPageActionButtonPress">
+                        <layoutData>
+                            <OverflowToolbarLayoutData moveToOverflow="true"/>
+                        </layoutData>
+                    </Button>
+                    <Button text="Atrás" iconFirst="false" type="Transparent" enabled="true" press="_onFioriObjectPageActionButtonPress1">
+                        <layoutData>
+                            <OverflowToolbarLayoutData moveToOverflow="true"/>
+                        </layoutData>
+                    </Button>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:headerContent>
+            <VBox>
+                <items>
+                    <core:Icon src="sap-icon://customer-and-supplier" class="sapUxAPObjectPageHeaderObjectImage sapSmartTemplatesObjectPageHeaderImage" size="6rem" width="6rem" height="6rem" visible="true"/>
+                </items>
+            </VBox>
+            <VBox>
+                <items>
+                    <HBox>
+                        <items>
+                            <Label text="Rol"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <ObjectStatus text="{Rol}"/>
+                        </items>
+                    </HBox>
+                    <HBox>
+                        <items>
+                            <Label text="Telefono"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <ObjectStatus text="{Telefono}"/>
+                        </items>
+                    </HBox>
+                    <HBox>
+                        <items>
+                            <Label text="Email"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <ObjectStatus text="{Email}"/>
+                        </items>
+                    </HBox>
+                </items>
+            </VBox>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <Title text="Estatus" titleStyle="H4" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                    <Text text="{Status}" width="245.640625px" maxLines="4" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </items>
+                <layoutData/>
+            </VBox>
+        </uxap:headerContent>
+        <uxap:sections>
+            <uxap:ObjectPageSection title="Datos">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Datos">
+                        <uxap:blocks>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Ciudad" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectNumber number="{path:'Ciudad', formatter:'.formatFractionDigitFromValue'}" unit="" emphasized="false"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Direccion" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectNumber number="{path:'Direccion', formatter:'.formatFractionDigitFromValue'}" unit="" emphasized="false"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Comentarios" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectNumber number="{path:'Comentarios', formatter:'.formatFractionDigitFromValue'}" unit="" emphasized="false"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="Citas Pendientes">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Citas Pendientes">
+                        <uxap:blocks>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Fecha" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="#TODO"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar design="auto">
+                <content>
+                    <ToolbarSpacer/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>

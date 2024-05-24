@@ -1,0 +1,93 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.manageProducts.controller.AgendarCita" xmlns:uxap="sap.uxap" xmlns="sap.m">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showEditHeaderButton="false" showFooter="false" class="sapUiSizeCompact">
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectTitle="Agendar Cita" objectSubtitle="" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true" objectImageURI="/build/uilibraries/content/static/image-canvas.svg">
+                <uxap:navigationBar>
+                    <Bar>
+                        <contentLeft>
+                            <Button type="Back" press="_onFioriObjectPageHeaderPress"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text=""/>
+                        </contentMiddle>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+                <uxap:actions/>
+                <uxap:breadCrumbsLinks/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:headerContent/>
+        <uxap:sections>
+            <uxap:ObjectPageSection title="">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="763.40283203125px" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <List id="Fiori_ObjectPage_ObjectPage_0-sections-Fiori_ObjectPage_Section-1716190133331-sectionContent-sap_m_VBox-1716410313567-items-sap_m_ObjectList-1716410355156" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="1" growingScrollToLoad="true" visible="true" items="{path:'/ClientesSet', templateShareable:true}">
+                                        <infoToolbar>
+                                            <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                                <content>
+                                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </content>
+                                            </Toolbar>
+                                        </infoToolbar>
+                                        <headerToolbar>
+                                            <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                                <content>
+                                                    <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" search="_onSearchFieldSearch"/>
+                                                </content>
+                                            </Toolbar>
+                                        </headerToolbar>
+                                        <items>
+                                            <ObjectListItem intro="{ID}" title="{Nombre}" number="{Empresa}" numberUnit="{Rol}" numberState="None" type="Active" selected="true" showMarkers="false">
+                                                <attributes>
+                                                    <ObjectAttribute text="Attribute 1" active="false" visible="true"/>
+                                                    <ObjectAttribute text="Attribute 2" active="false" visible="true"/>
+                                                </attributes>
+                                                <firstStatus>
+                                                    <ObjectStatus text="Status 1" state="None" visible="true"/>
+                                                </firstStatus>
+                                                <secondStatus>
+                                                    <ObjectStatus text="Status 2" state="None" visible="true"/>
+                                                </secondStatus>
+                                            </ObjectListItem>
+                                        </items>
+                                    </List>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="224.8090362548828px" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <Title text="Fecha" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                    <DatePicker placeholder="Fecha de cita" width="362.3958435058594px" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <uxap:blocks>
+                            <Button text="Agendar" type="Accept" iconFirst="true" width="402.5868225097656px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                            <Button text="Cancelar" type="Default" iconFirst="true" width="334.40972900390625px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar design="auto">
+                <content>
+                    <ToolbarSpacer/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>
